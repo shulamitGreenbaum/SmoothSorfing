@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmoothsurfingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="action">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="id_volanteer" Type="Int32" />
+    <Property Name="macro" Type="Int32" />
+    <Property Name="count_fidback" Type="Int32" />
+    <NavigationProperty Name="volunteer" Relationship="Self.FK_action_volunteer" FromRole="action" ToRole="volunteer" />
+    <NavigationProperty Name="tbActionWord" Relationship="Self.FK_tbActionWord_action" FromRole="action" ToRole="tbActionWord" />
+  </EntityType>
+  <EntityType Name="search">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idAction" Type="Int32" Nullable="false" />
+    <Property Name="dit" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbActionWord">
+    <Key>
+      <PropertyRef Name="word_id" />
+    </Key>
+    <Property Name="word_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="action_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="action" Relationship="Self.FK_tbActionWord_action" FromRole="tbActionWord" ToRole="action" />
+    <NavigationProperty Name="tbKeyWord" Relationship="Self.FK_tbKeyWord_tbActionWord" FromRole="tbActionWord" ToRole="tbKeyWord" />
+  </EntityType>
+  <EntityType Name="tbKeyWord">
+    <Key>
+      <PropertyRef Name="word_id" />
+    </Key>
+    <Property Name="word_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sen_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbActionWord" Relationship="Self.FK_tbKeyWord_tbActionWord" FromRole="tbKeyWord" ToRole="tbActionWord" />
+    <NavigationProperty Name="tbKWord" Relationship="Self.FK_tbKeyWord_tbKWord" FromRole="tbKeyWord" ToRole="tbKWord" />
+  </EntityType>
+  <EntityType Name="tbKWord">
+    <Key>
+      <PropertyRef Name="KeyWordId" />
+    </Key>
+    <Property Name="KeyWordId" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbKeyWord" Relationship="Self.FK_tbKeyWord_tbKWord" FromRole="tbKWord" ToRole="tbKeyWord" />
+  </EntityType>
+  <EntityType Name="volunteer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="emailAddress" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="action" Relationship="Self.FK_action_volunteer" FromRole="volunteer" ToRole="action" />
+  </EntityType>
+  <Association Name="FK_action_volunteer">
+    <End Role="volunteer" Type="Self.volunteer" Multiplicity="0..1" />
+    <End Role="action" Type="Self.action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="volunteer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="action">
+        <PropertyRef Name="id_volanteer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbActionWord_action">
+    <End Role="action" Type="Self.action" Multiplicity="1" />
+    <End Role="tbActionWord" Type="Self.tbActionWord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbActionWord">
+        <PropertyRef Name="action_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbKeyWord_tbActionWord">
+    <End Role="tbActionWord" Type="Self.tbActionWord" Multiplicity="1" />
+    <End Role="tbKeyWord" Type="Self.tbKeyWord" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbActionWord">
+        <PropertyRef Name="word_id" />
+      </Principal>
+      <Dependent Role="tbKeyWord">
+        <PropertyRef Name="word_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbKeyWord_tbKWord">
+    <End Role="tbKWord" Type="Self.tbKWord" Multiplicity="0..1" />
+    <End Role="tbKeyWord" Type="Self.tbKeyWord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbKWord">
+        <PropertyRef Name="KeyWordId" />
+      </Principal>
+      <Dependent Role="tbKeyWord">
+        <PropertyRef Name="sen_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SmoothsurfingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="action" EntityType="Self.action" />
+    <EntitySet Name="search" EntityType="Self.search" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tbActionWord" EntityType="Self.tbActionWord" />
+    <EntitySet Name="tbKeyWord" EntityType="Self.tbKeyWord" />
+    <EntitySet Name="tbKWord" EntityType="Self.tbKWord" />
+    <EntitySet Name="volunteer" EntityType="Self.volunteer" />
+    <AssociationSet Name="FK_action_volunteer" Association="Self.FK_action_volunteer">
+      <End Role="volunteer" EntitySet="volunteer" />
+      <End Role="action" EntitySet="action" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbActionWord_action" Association="Self.FK_tbActionWord_action">
+      <End Role="action" EntitySet="action" />
+      <End Role="tbActionWord" EntitySet="tbActionWord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbKeyWord_tbActionWord" Association="Self.FK_tbKeyWord_tbActionWord">
+      <End Role="tbActionWord" EntitySet="tbActionWord" />
+      <End Role="tbKeyWord" EntitySet="tbKeyWord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbKeyWord_tbKWord" Association="Self.FK_tbKeyWord_tbKWord">
+      <End Role="tbKWord" EntitySet="tbKWord" />
+      <End Role="tbKeyWord" EntitySet="tbKeyWord" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

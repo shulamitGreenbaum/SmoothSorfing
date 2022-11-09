@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="smoothsurfingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="action">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="id_volanteer" Type="Int32" />
+    <Property Name="macro" Type="Int32" />
+    <Property Name="count_fidback" Type="Int32" />
+  </EntityType>
+  <EntityType Name="search">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idAction" Type="Int32" />
+    <Property Name="dit" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbActionWord">
+    <Key>
+      <PropertyRef Name="word_id" />
+    </Key>
+    <Property Name="word_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="action_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbKeyWord">
+    <Key>
+      <PropertyRef Name="word_id" />
+    </Key>
+    <Property Name="word_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sen_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbKWord">
+    <Key>
+      <PropertyRef Name="KeyWordId" />
+    </Key>
+    <Property Name="KeyWordId" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="volanteer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="emailAddress" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="smoothsurfingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="action" EntityType="Self.action" />
+    <EntitySet Name="search" EntityType="Self.search" />
+    <EntitySet Name="tbActionWord" EntityType="Self.tbActionWord" />
+    <EntitySet Name="tbKeyWord" EntityType="Self.tbKeyWord" />
+    <EntitySet Name="tbKWord" EntityType="Self.tbKWord" />
+    <EntitySet Name="volanteer" EntityType="Self.volanteer" />
+  </EntityContainer>
+</Schema>

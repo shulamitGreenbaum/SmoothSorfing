@@ -1,0 +1,15 @@
+
+ <div  [formGroup]="searchMacroForm">
+   <label for="site-search">Search the site:</label>
+   <input type="search"  name="q" #searchMacro class="form-control" formControlName="searchMacro">
+   
+   <button (click)="start()" >start recording</button>
+   <button (click)="saveText(searchMacro.value)" >Search</button>
+   
+    <ul *ngIf="searchMacroForm.controls['searchMacro'].errors!=null"> 
+        <li *ngIf="searchMacroForm.controls['searchMacro'].errors['required']!=null">required field</li> 
+     </ul> 
+     
+   
+     
+</div>

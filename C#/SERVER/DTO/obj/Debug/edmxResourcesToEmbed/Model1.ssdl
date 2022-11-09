@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="smoothsurfingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="action">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" />
+    <Property Name="id_volanteer" Type="int" />
+    <Property Name="macro" Type="int" />
+    <Property Name="count_fidback" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'smoothsurfing.dbo.fidback' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="fidback">
+          <Property Name="id_macro" Type="int" />
+          <Property Name="idAction" Type="int" />
+          <Property Name="like_disLike" Type="bit" />
+        </EntityType>-->
+  <EntityType Name="search">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="idAction" Type="int" />
+    <Property Name="dit" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tbActionWord">
+    <Key>
+      <PropertyRef Name="word_id" />
+    </Key>
+    <Property Name="word_id" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="action_id" Type="nvarchar" MaxLength="9" />
+  </EntityType>
+  <EntityType Name="tbKeyWord">
+    <Key>
+      <PropertyRef Name="word_id" />
+    </Key>
+    <Property Name="word_id" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="sen_id" Type="nvarchar" MaxLength="9" />
+  </EntityType>
+  <EntityType Name="tbKWord">
+    <Key>
+      <PropertyRef Name="KeyWordId" />
+    </Key>
+    <Property Name="KeyWordId" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="volanteer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" />
+    <Property Name="password" Type="nvarchar" MaxLength="20" />
+    <Property Name="emailAddress" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="smoothsurfingModelStoreContainer">
+    <EntitySet Name="action" EntityType="Self.action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="search" EntityType="Self.search" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbActionWord" EntityType="Self.tbActionWord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbKeyWord" EntityType="Self.tbKeyWord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbKWord" EntityType="Self.tbKWord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="volanteer" EntityType="Self.volanteer" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

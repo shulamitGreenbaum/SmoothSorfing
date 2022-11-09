@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="smoothsurfingModelStoreContainer" CdmEntityContainer="smoothsurfingEntities">
+    <EntitySetMapping Name="action">
+      <EntityTypeMapping TypeName="smoothsurfingModel.action">
+        <MappingFragment StoreEntitySet="action">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id_volanteer" ColumnName="id_volanteer" />
+          <ScalarProperty Name="macro" ColumnName="macro" />
+          <ScalarProperty Name="count_fidback" ColumnName="count_fidback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="search">
+      <EntityTypeMapping TypeName="smoothsurfingModel.search">
+        <MappingFragment StoreEntitySet="search">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idAction" ColumnName="idAction" />
+          <ScalarProperty Name="dit" ColumnName="dit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbActionWord">
+      <EntityTypeMapping TypeName="smoothsurfingModel.tbActionWord">
+        <MappingFragment StoreEntitySet="tbActionWord">
+          <ScalarProperty Name="word_id" ColumnName="word_id" />
+          <ScalarProperty Name="action_id" ColumnName="action_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbKeyWord">
+      <EntityTypeMapping TypeName="smoothsurfingModel.tbKeyWord">
+        <MappingFragment StoreEntitySet="tbKeyWord">
+          <ScalarProperty Name="word_id" ColumnName="word_id" />
+          <ScalarProperty Name="sen_id" ColumnName="sen_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbKWord">
+      <EntityTypeMapping TypeName="smoothsurfingModel.tbKWord">
+        <MappingFragment StoreEntitySet="tbKWord">
+          <ScalarProperty Name="KeyWordId" ColumnName="KeyWordId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="volanteer">
+      <EntityTypeMapping TypeName="smoothsurfingModel.volanteer">
+        <MappingFragment StoreEntitySet="volanteer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

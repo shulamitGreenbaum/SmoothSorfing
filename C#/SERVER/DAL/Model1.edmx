@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="smoothsurfingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="action">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+          <Property Name="id_volanteer" Type="int" />
+          <Property Name="macro" Type="int" />
+          <Property Name="count_fidback" Type="int" />
+        </EntityType>
+        <EntityType Name="search">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="idAction" Type="int" />
+          <Property Name="dit" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tbActionWord">
+          <Key>
+            <PropertyRef Name="word_id" />
+          </Key>
+          <Property Name="word_id" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="action_id" Type="nvarchar" MaxLength="9" />
+        </EntityType>
+        <EntityType Name="tbKWord">
+          <Key>
+            <PropertyRef Name="KeyWordId" />
+          </Key>
+          <Property Name="KeyWordId" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="volunteer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+          <Property Name="password" Type="nvarchar" MaxLength="20" />
+          <Property Name="emailAddress" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <Association Name="FK__action__id_volan__47DBAE45">
+          <End Role="action" Type="Self.action" Multiplicity="0..1" />
+          <End Role="action1" Type="Self.action" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="action">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="action1">
+              <PropertyRef Name="id_volanteer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__action__id_volan__49C3F6B7">
+          <End Role="volunteer" Type="Self.volunteer" Multiplicity="0..1" />
+          <End Role="action" Type="Self.action" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="volunteer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="action">
+              <PropertyRef Name="id_volanteer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__search__idAction__48CFD27E">
+          <End Role="action" Type="Self.action" Multiplicity="0..1" />
+          <End Role="search" Type="Self.search" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="action">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="search">
+              <PropertyRef Name="idAction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbActionW__word___4AB81AF0">
+          <End Role="tbKWord" Type="Self.tbKWord" Multiplicity="1" />
+          <End Role="tbActionWord" Type="Self.tbActionWord" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbKWord">
+              <PropertyRef Name="KeyWordId" />
+            </Principal>
+            <Dependent Role="tbActionWord">
+              <PropertyRef Name="word_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="smoothsurfingModelStoreContainer">
+          <EntitySet Name="action" EntityType="Self.action" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="search" EntityType="Self.search" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbActionWord" EntityType="Self.tbActionWord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbKWord" EntityType="Self.tbKWord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="volunteer" EntityType="Self.volunteer" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__action__id_volan__47DBAE45" Association="Self.FK__action__id_volan__47DBAE45">
+            <End Role="action" EntitySet="action" />
+            <End Role="action1" EntitySet="action" />
+          </AssociationSet>
+          <AssociationSet Name="FK__action__id_volan__49C3F6B7" Association="Self.FK__action__id_volan__49C3F6B7">
+            <End Role="volunteer" EntitySet="volunteer" />
+            <End Role="action" EntitySet="action" />
+          </AssociationSet>
+          <AssociationSet Name="FK__search__idAction__48CFD27E" Association="Self.FK__search__idAction__48CFD27E">
+            <End Role="action" EntitySet="action" />
+            <End Role="search" EntitySet="search" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbActionW__word___4AB81AF0" Association="Self.FK__tbActionW__word___4AB81AF0">
+            <End Role="tbKWord" EntitySet="tbKWord" />
+            <End Role="tbActionWord" EntitySet="tbActionWord" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="smoothsurfingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="action">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="id_volanteer" Type="Int32" />
+          <Property Name="macro" Type="Int32" />
+          <Property Name="count_fidback" Type="Int32" />
+          <NavigationProperty Name="search" Relationship="smoothsurfingModel.FK__search__idAction__48CFD27E" FromRole="action" ToRole="search" />
+          <NavigationProperty Name="volunteer" Relationship="smoothsurfingModel.FK__action__id_volan__49C3F6B7" FromRole="action" ToRole="volunteer" />
+          <NavigationProperty Name="action1" Relationship="smoothsurfingModel.FK__action__id_volan__47DBAE45" FromRole="action" ToRole="action1" />
+          <NavigationProperty Name="action2" Relationship="smoothsurfingModel.FK__action__id_volan__47DBAE45" FromRole="action1" ToRole="action" />
+        </EntityType>
+        <EntityType Name="search">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="idAction" Type="Int32" />
+          <Property Name="dit" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="action" Relationship="smoothsurfingModel.FK__search__idAction__48CFD27E" FromRole="search" ToRole="action" />
+        </EntityType>
+        <EntityType Name="tbActionWord">
+          <Key>
+            <PropertyRef Name="word_id" />
+          </Key>
+          <Property Name="word_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="action_id" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbKWord" Relationship="smoothsurfingModel.FK__tbActionW__word___4AB81AF0" FromRole="tbActionWord" ToRole="tbKWord" />
+        </EntityType>
+        <EntityType Name="tbKWord">
+          <Key>
+            <PropertyRef Name="KeyWordId" />
+          </Key>
+          <Property Name="KeyWordId" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbActionWord" Relationship="smoothsurfingModel.FK__tbActionW__word___4AB81AF0" FromRole="tbKWord" ToRole="tbActionWord" />
+        </EntityType>
+        <EntityType Name="volunteer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="emailAddress" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="action" Relationship="smoothsurfingModel.FK__action__id_volan__49C3F6B7" FromRole="volunteer" ToRole="action" />
+        </EntityType>
+        <EntityContainer Name="smoothsurfingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="action" EntityType="Self.action" />
+          <EntitySet Name="search" EntityType="Self.search" />
+          <EntitySet Name="tbActionWord" EntityType="Self.tbActionWord" />
+          <EntitySet Name="tbKWord" EntityType="Self.tbKWord" />
+          <EntitySet Name="volunteer" EntityType="Self.volunteer" />
+          <AssociationSet Name="FK__search__idAction__48CFD27E" Association="smoothsurfingModel.FK__search__idAction__48CFD27E">
+            <End Role="action" EntitySet="action" />
+            <End Role="search" EntitySet="search" />
+          </AssociationSet>
+          <AssociationSet Name="FK__action__id_volan__49C3F6B7" Association="smoothsurfingModel.FK__action__id_volan__49C3F6B7">
+            <End Role="volunteer" EntitySet="volunteer" />
+            <End Role="action" EntitySet="action" />
+          </AssociationSet>
+          <AssociationSet Name="FK__action__id_volan__47DBAE45" Association="smoothsurfingModel.FK__action__id_volan__47DBAE45">
+            <End Role="action" EntitySet="action" />
+            <End Role="action1" EntitySet="action" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbActionW__word___4AB81AF0" Association="smoothsurfingModel.FK__tbActionW__word___4AB81AF0">
+            <End Role="tbKWord" EntitySet="tbKWord" />
+            <End Role="tbActionWord" EntitySet="tbActionWord" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK__search__idAction__48CFD27E">
+          <End Type="smoothsurfingModel.action" Role="action" Multiplicity="0..1" />
+          <End Type="smoothsurfingModel.search" Role="search" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="action">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="search">
+              <PropertyRef Name="idAction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__action__id_volan__49C3F6B7">
+          <End Type="smoothsurfingModel.volunteer" Role="volunteer" Multiplicity="0..1" />
+          <End Type="smoothsurfingModel.action" Role="action" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="volunteer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="action">
+              <PropertyRef Name="id_volanteer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__action__id_volan__47DBAE45">
+          <End Type="smoothsurfingModel.action" Role="action" Multiplicity="0..1" />
+          <End Type="smoothsurfingModel.action" Role="action1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="action">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="action1">
+              <PropertyRef Name="id_volanteer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbActionW__word___4AB81AF0">
+          <End Type="smoothsurfingModel.tbKWord" Role="tbKWord" Multiplicity="1" />
+          <End Type="smoothsurfingModel.tbActionWord" Role="tbActionWord" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbKWord">
+              <PropertyRef Name="KeyWordId" />
+            </Principal>
+            <Dependent Role="tbActionWord">
+              <PropertyRef Name="word_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="smoothsurfingModelStoreContainer" CdmEntityContainer="smoothsurfingEntities">
+          <EntitySetMapping Name="action">
+            <EntityTypeMapping TypeName="smoothsurfingModel.action">
+              <MappingFragment StoreEntitySet="action">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id_volanteer" ColumnName="id_volanteer" />
+                <ScalarProperty Name="macro" ColumnName="macro" />
+                <ScalarProperty Name="count_fidback" ColumnName="count_fidback" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="search">
+            <EntityTypeMapping TypeName="smoothsurfingModel.search">
+              <MappingFragment StoreEntitySet="search">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idAction" ColumnName="idAction" />
+                <ScalarProperty Name="dit" ColumnName="dit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbActionWord">
+            <EntityTypeMapping TypeName="smoothsurfingModel.tbActionWord">
+              <MappingFragment StoreEntitySet="tbActionWord">
+                <ScalarProperty Name="word_id" ColumnName="word_id" />
+                <ScalarProperty Name="action_id" ColumnName="action_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbKWord">
+            <EntityTypeMapping TypeName="smoothsurfingModel.tbKWord">
+              <MappingFragment StoreEntitySet="tbKWord">
+                <ScalarProperty Name="KeyWordId" ColumnName="KeyWordId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="volunteer">
+            <EntityTypeMapping TypeName="smoothsurfingModel.volunteer">
+              <MappingFragment StoreEntitySet="volunteer">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

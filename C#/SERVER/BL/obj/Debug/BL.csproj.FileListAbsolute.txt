@@ -1,0 +1,22 @@
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\BL.dll.config
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\BL.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\BL.pdb
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\DAL.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\DTO.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\EntityFramework.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\DAL.pdb
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\DAL.dll.config
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\DTO.pdb
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\DTO.dll.config
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\EntityFramework.xml
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.pdb
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.dll
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\BL\obj\Debug\BL.pdb

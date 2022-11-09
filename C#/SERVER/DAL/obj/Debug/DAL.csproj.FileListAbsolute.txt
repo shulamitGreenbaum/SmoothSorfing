@@ -1,0 +1,30 @@
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DAL.dll.config
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DAL.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DAL.pdb
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DTO.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DTO.pdb
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DTO.dll.config
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.xml
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.dll
+C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.pdb
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DAL.dll.config
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DAL.dll
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DAL.pdb
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DTO.dll
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DTO.pdb
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\DTO.dll.config
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.dll
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\DAL\obj\Debug\DAL.pdb
