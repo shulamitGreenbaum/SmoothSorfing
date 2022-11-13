@@ -42,10 +42,9 @@ export class SearchComponent implements OnInit {
   }
 
   saveText( text:string): void{
-   this.SText = text;
-   this.voiceRecognitionService.saveText(this.SText).subscribe(
-    (     res: any)=>(this.allSen.push(res))
    
+   this.voiceRecognitionService.saveText(text).subscribe(
+    (     res: any)=>((res))
     );
   }
 

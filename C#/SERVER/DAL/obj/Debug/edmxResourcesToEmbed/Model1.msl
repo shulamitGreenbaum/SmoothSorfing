@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="SmoothsurfingModelStoreContainer" CdmEntityContainer="SmoothsurfingEntities">
+  <EntityContainerMapping StorageEntityContainer="smoothsurfingModelStoreContainer" CdmEntityContainer="smoothsurfingEntities">
     <EntitySetMapping Name="action">
-      <EntityTypeMapping TypeName="SmoothsurfingModel.action">
+      <EntityTypeMapping TypeName="smoothsurfingModel.action">
         <MappingFragment StoreEntitySet="action">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="search">
-      <EntityTypeMapping TypeName="SmoothsurfingModel.search">
+      <EntityTypeMapping TypeName="smoothsurfingModel.search">
         <MappingFragment StoreEntitySet="search">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idAction" ColumnName="idAction" />
@@ -21,35 +21,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="SmoothsurfingModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tbActionWord">
-      <EntityTypeMapping TypeName="SmoothsurfingModel.tbActionWord">
+      <EntityTypeMapping TypeName="smoothsurfingModel.tbActionWord">
         <MappingFragment StoreEntitySet="tbActionWord">
           <ScalarProperty Name="word_id" ColumnName="word_id" />
           <ScalarProperty Name="action_id" ColumnName="action_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbKeyWord">
-      <EntityTypeMapping TypeName="SmoothsurfingModel.tbKeyWord">
-        <MappingFragment StoreEntitySet="tbKeyWord">
-          <ScalarProperty Name="word_id" ColumnName="word_id" />
-          <ScalarProperty Name="sen_id" ColumnName="sen_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tbKWord">
-      <EntityTypeMapping TypeName="SmoothsurfingModel.tbKWord">
+      <EntityTypeMapping TypeName="smoothsurfingModel.tbKWord">
         <MappingFragment StoreEntitySet="tbKWord">
           <ScalarProperty Name="KeyWordId" ColumnName="KeyWordId" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -57,7 +38,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="volunteer">
-      <EntityTypeMapping TypeName="SmoothsurfingModel.volunteer">
+      <EntityTypeMapping TypeName="smoothsurfingModel.volunteer">
         <MappingFragment StoreEntitySet="volunteer">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />

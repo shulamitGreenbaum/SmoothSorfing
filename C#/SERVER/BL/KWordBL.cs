@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    class KWordBL
+  public class KWordBL
     {
         public static void AddKWord(KWordDTO kWord)
         {

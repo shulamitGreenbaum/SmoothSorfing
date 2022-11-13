@@ -16,7 +16,7 @@ export class VoiceRecognitionService {
   public text = '';
   tempWords!: string;
 
-  constructor() {
+  constructor(private http:HttpClient) {
    }
 
   init() {
@@ -61,7 +61,7 @@ export class VoiceRecognitionService {
     this.tempWords = '';
   }
   saveText( s:string) :Observable<string>{
-    return this.http.post<string>(environment.url + 'homepage/SaveChanges', s);
+    return this.http.post<string>(environment.url + 'search/SaveSearch', s);
   
   }
 }

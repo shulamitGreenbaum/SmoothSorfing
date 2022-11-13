@@ -26,20 +26,33 @@ namespace BL
             {
 
 
-                return db.tbKWord.Include(k => k.action).ToList();
+                return db.tbKWord.Include(k => k.tbActionWord).ToList();
 
             }
 
         }
 
-        public static List<action> Search(string searchText)
+        public static SearchResult Search(string searchText)
         {
+            
+            SearchResult result = new SearchResult();
             var allWords = GetAllKeyWords();
             var searchWords = searchText.Split(' ').ToList();
             var searchKeyWords = allWords.Where(w => searchWords.Any(s => s == w.name));
+            result.KeyWordsIds = searchKeyWords.Select(k =>int.Parse(k.KeyWordId)).ToList();
             //todo Change senid to macro FK
+            result.SortedPosibleActions = GetPossibleActionsByKeyWords(result.KeyWordsIds);
             return searchKeyWords.SelectMany(sw => sw.action).Select(w => w.macro.ToString()).ToList();
 
+        }
+
+        private static List<Acacttion> GetPossibleActionsByKeyWords(List<int> keyWordsIds)
+        {
+            using(smoothsurfingEntities db=new smoothsurfingEntities())
+            {
+                // return db.action.Where(a => a.actionword.Any()).tolist().OrderBy();
+                return db.action.ToList().OrderBy(a=>a.count_fidback).ToList();
+            }
         }
     }
 }

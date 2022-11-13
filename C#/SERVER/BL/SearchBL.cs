@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    class SearchBL
+   public  class SearchBL
     {
       public static void SaveSearch(tbKWord kw )
         {

@@ -85,3 +85,7 @@ C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\
 C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\API\obj\Debug\API.dll
 C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\API\obj\Debug\API.pdb
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\API\obj\Debug\API.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\API\obj\Debug\API.dll
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\API\obj\Debug\API.pdb
