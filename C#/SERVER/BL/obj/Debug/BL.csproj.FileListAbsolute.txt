@@ -24,3 +24,17 @@ C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\obj\Debug\BL.csproj.As
 C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
 C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\obj\Debug\BL.dll
 C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\obj\Debug\BL.pdb
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\BL.dll.config
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\BL.dll
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\BL.pdb
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\DAL.dll
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\DTO.dll
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\EntityFramework.dll
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\DAL.pdb
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\DAL.dll.config
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\DTO.pdb
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\DTO.dll.config
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\EntityFramework.xml
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Documents\GitHub\SmoothSorfing\C#\SERVER\BL\obj\Debug\BL.csproj.CopyComplete

@@ -14,9 +14,16 @@ namespace DAL
     
     public partial class tbKWord
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tbKWord()
+        {
+            this.tbActionWord = new HashSet<tbActionWord>();
+        }
+    
         public string KeyWordId { get; set; }
         public string name { get; set; }
     
-        public virtual tbActionWord tbActionWord { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbActionWord> tbActionWord { get; set; }
     }
 }

@@ -25,10 +25,10 @@ namespace DAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<action> action { get; set; }
         public virtual DbSet<search> search { get; set; }
         public virtual DbSet<tbActionWord> tbActionWord { get; set; }
         public virtual DbSet<tbKWord> tbKWord { get; set; }
         public virtual DbSet<volunteer> volunteer { get; set; }
+        public virtual DbSet<action> action { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace DAL
         public action()
         {
             this.search = new HashSet<search>();
-            this.action1 = new HashSet<action>();
+            this.tbActionWord = new HashSet<tbActionWord>();
         }
     
         public int id { get; set; }
@@ -27,11 +27,10 @@ namespace DAL
         public Nullable<int> macro { get; set; }
         public Nullable<int> count_fidback { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<search> search { get; set; }
         public virtual volunteer volunteer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<action> action1 { get; set; }
-        public virtual action action2 { get; set; }
+        public virtual ICollection<search> search { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbActionWord> tbActionWord { get; set; }
     }
 }

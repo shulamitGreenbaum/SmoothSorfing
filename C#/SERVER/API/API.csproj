@@ -291,7 +291,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\searchController.cs" />
     <Compile Include="Controllers\tbActionWordController.cs" />
-    <Compile Include="Controllers\tbKeyWordController.cs" />
     <Compile Include="Controllers\tdKWordController.cs" />
     <Compile Include="Controllers\volunteerController.cs" />
     <Compile Include="Controllers\actionController.cs" />

@@ -53,9 +53,7 @@
     <Compile Include="CONVERTORS\SearchConvertor.cs" />
     <Compile Include="CONVERTORS\TbActionWordConvertor.cs" />
     <Compile Include="CONVERTORS\TbKWordConvertor.cs" />
-    <Compile Include="CONVERTORS\TdKeyWordConvetor.cs" />
     <Compile Include="CONVERTORS\VolunteerConvertor.cs" />
-    <Compile Include="KeyWordBL.cs" />
     <Compile Include="KWordBL.cs" />
     <Compile Include="SearchBL.cs" />
     <Compile Include="VolunteerBL.cs" />

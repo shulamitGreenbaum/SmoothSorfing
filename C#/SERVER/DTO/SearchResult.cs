@@ -8,8 +8,8 @@ namespace DTO
 {
    public class SearchResult
     {
-        public List<int> KeyWordsIds { get; set; }
-        public List<ActionDTO> SortedPosibleActions { get; set; }
+        public List<int> KeyWordsIds { get; set; } = new List<int>();
+        public List<ActionDTO> SortedPosibleActions { get; set; } = new List<ActionDTO>();
 
         //todo Add  missing dto 
         //todo search logic

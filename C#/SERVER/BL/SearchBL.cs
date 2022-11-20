@@ -9,11 +9,11 @@ namespace BL
 {
    public  class SearchBL
     {
-      public static void SaveSearch(tbKWord kw )
+      public static void SaveSearch(tbKWord s )
         {
             using (smoothsurfingEntities db = new smoothsurfingEntities())
             {
-                db.tbKWord.Add(kw);
+                db.tbKWord.Add(s);
                 db.SaveChanges();
 
 

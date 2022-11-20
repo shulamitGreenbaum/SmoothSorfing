@@ -15,8 +15,10 @@ namespace DAL
     public partial class tbActionWord
     {
         public string word_id { get; set; }
-        public string action_id { get; set; }
+        public int action_id { get; set; }
+        public Nullable<int> usingWordCounter { get; set; }
     
         public virtual tbKWord tbKWord { get; set; }
+        public virtual action action { get; set; }
     }
 }
