@@ -18,6 +18,14 @@ namespace BL.CONVERTORS
                 name = kWord.name,
             };
         }
-        
+        public static KWordDTO ConvertKWordDTOToKWord(tbKWord kWord)
+        {
+            return new KWordDTO
+            {
+                KeyWordId = kWord.KeyWordId,
+                name = kWord.name,
+            };
+        }
+
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using BL.CONVERTORS;
 
 namespace BL
 {
@@ -47,7 +48,7 @@ namespace BL
             result.KeyWordsIds = searchKeyWords.Select(k => int.Parse(k.KeyWordId)).ToList();
             //todo Change senid to macro FK
             //convert with convert func
-            result.SortedPosibleActions = GetPossibleActionsByKeyWords(result.KeyWordsIds);
+            result.SortedPosibleActions = (TbKWordConvertor.ConvertKWordDTOToKWord)GetPossibleActionsByKeyWords(result.KeyWordsIds);
             return searchKeyWords.SelectMany(sw => sw.action).Select(w => w.macro.ToString()).ToList();
 
         }

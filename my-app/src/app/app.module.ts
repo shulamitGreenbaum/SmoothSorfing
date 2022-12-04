@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './components/error/error.component';
 import { MaterialExampleModule } from './material.module';
+import { seeMacroComponent } from './components/seeMacro/seeMacro.component';
 
 const routes: Routes = [
   {path:'home', component:SearchComponent}, 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'add-volunteer', component:AddVolunteerComponent},
   {path: 'rate-video', component:RateVideoComponent},
   {path: 'veiw-video', component:VeiwVideoComponent},
+  {path: 'seeMacro', component:seeMacroComponent},
   {path:'**', component:ErrorComponent} //always has to be last
   ];
 
@@ -32,7 +34,8 @@ const routes: Routes = [
     SearchComponent,
     RateVideoComponent,
     VeiwVideoComponent,
-    ErrorComponent
+    ErrorComponent,
+    seeMacroComponent
   ],
   imports: [
     BrowserModule,
