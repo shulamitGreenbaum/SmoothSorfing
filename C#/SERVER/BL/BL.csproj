@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionBL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CONVERTORS\ActionConvertor.cs" />
     <Compile Include="CONVERTORS\SearchConvertor.cs" />

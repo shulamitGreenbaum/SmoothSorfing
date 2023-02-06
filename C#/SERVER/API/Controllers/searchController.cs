@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using DAL;
 
 namespace API.Controllers
 {
@@ -13,10 +14,12 @@ namespace API.Controllers
     public class SearchController : ApiController
     {
         [ActionName("SaveSearch"), HttpPost]
-        public IHttpActionResult SaveSearch( string s)
+        public IHttpActionResult SaveSearch( string s, int id)//recieves sentence search from angular
         {
-            BL.SearchBL.SaveSearch(s);
+            tbKWord newkeyword = new tbKWord(id, s); //creates new key wrod
+            BL.SearchBL.SaveSearch(newkeyword); //saves the search in BL
             return Ok(true);
         }
+        
     }
 }

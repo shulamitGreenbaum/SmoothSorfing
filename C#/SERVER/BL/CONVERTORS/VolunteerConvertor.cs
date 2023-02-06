@@ -19,6 +19,12 @@ namespace BL.CONVERTORS
                 password = volunteer.password,
                 emailAddress = volunteer.emailAddress
                };
-    }
+        }
+      
+        public static IEnumerable<volunteer> ConvertVolunteersToDAL(IEnumerable<VolunteerDTO> volunteers)
+        {
+            return volunteers.Select(a => ConvertVolunteerToDAL(a));
+
+        }
     } 
 }

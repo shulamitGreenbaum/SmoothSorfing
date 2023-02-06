@@ -8,6 +8,11 @@ namespace DTO
 {
   public  class ActionDTO
     {
+        public int id { get; set; }
+        public string name { get; set; }
+        public Nullable<int> id_volanteer { get; set; }
+        public Nullable<int> macro { get; set; }
+        public Nullable<int> count_fidback { get; set; }
 
     }
 }

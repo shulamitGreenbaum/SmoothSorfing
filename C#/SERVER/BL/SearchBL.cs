@@ -11,6 +11,7 @@ namespace BL
     {
       public static void SaveSearch(tbKWord s )
         {
+            
             using (smoothsurfingEntities db = new smoothsurfingEntities())
             {
                 db.tbKWord.Add(s);

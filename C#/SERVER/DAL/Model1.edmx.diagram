@@ -7,7 +7,7 @@
       <Diagram DiagramId="f48abd3db37149258565b02ac0ef1319" Name="Diagram1">
         <EntityTypeShape EntityType="smoothsurfingModel.search" Width="1.5" PointX="5.25" PointY="5.125" />
         <EntityTypeShape EntityType="smoothsurfingModel.tbActionWord" Width="1.5" PointX="5.25" PointY="2.375" />
-        <EntityTypeShape EntityType="smoothsurfingModel.tbKWord" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="smoothsurfingModel.tbKWord" Width="1.5" PointX="2.125" PointY="5.625" />
         <EntityTypeShape EntityType="smoothsurfingModel.volunteer" Width="1.5" PointX="0.75" PointY="2.375" />
         <AssociationConnector Association="smoothsurfingModel.FK__tbActionW__word___5070F446" />
         <EntityTypeShape EntityType="smoothsurfingModel.action" Width="1.5" PointX="3" PointY="2.125" />

@@ -33,13 +33,22 @@ namespace BL
         {
             using (smoothsurfingEntities db = new smoothsurfingEntities())
             {
-                // return db.action.Where(a => a.actionword.Any()).tolist().OrderBy();
-                return db.action.ToList().OrderBy(a => a.count_fidback).ToList();
+                //todo Should be int and not string in SQL
+             //עוברים על טבלת קשר של מילות מפתח לפעולות בוחרים רק את המילים שהמשתמש חיפש ומקבצים לפי פעולה 
+                var groupbyAction = db.tbActionWord.Where(a => keyWordsIds.Any(kw => kw == int.Parse(a.word_id)))
+                    .GroupBy(a => a.action).ToDictionary(k=>k.Key,v=>v.ToList().Sum(k=>k.usingWordCounter)+v.ToList().Count()*10);//we must check to see which number will govr exact results
+                Dictionary<action, int> scoredActions = new Dictionary<action, int>();
+
+                var sortedDict = from entry in groupbyAction orderby entry.Value ascending select entry;
+                return sortedDict.Select(k => k.Key).ToList();
+
+
+
             }
         }
 
         public static SearchResult Search(string searchText)
-        {
+        {// User types/records his search and we split the sentance and look for key words.
 
             SearchResult result = new SearchResult();
             var allWords = GetAllKeyWords();
@@ -48,9 +57,8 @@ namespace BL
             result.KeyWordsIds = searchKeyWords.Select(k => int.Parse(k.KeyWordId)).ToList();
             //todo Change senid to macro FK
             //convert with convert func
-            result.SortedPosibleActions = (TbKWordConvertor.ConvertKWordDTOToKWord)GetPossibleActionsByKeyWords(result.KeyWordsIds);
-            return searchKeyWords.SelectMany(sw => sw.action).Select(w => w.macro.ToString()).ToList();
-
+            result.SortedPosibleActions = ActionConvertor.ConvertActionsToDAL(GetPossibleActionsByKeyWords(result.KeyWordsIds)).ToList();
+            return result;
         }
 
 

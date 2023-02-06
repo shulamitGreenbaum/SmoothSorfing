@@ -51,8 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionDTO.cs" />
+    <Compile Include="ActionWordDTO.cs" />
     <Compile Include="KeyWordDTO.cs" />
     <Compile Include="KWordDTO.cs" />
+    <Compile Include="searchDTO.cs" />
     <Compile Include="SearchResult.cs" />
     <Compile Include="VolunteerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

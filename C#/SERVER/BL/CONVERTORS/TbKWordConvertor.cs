@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BL.CONVERTORS
 {
-    class TbKWordConvertor
+   public static class TbKWordConvertor
     {
         public static tbKWord ConvertKWordToDAL(KWordDTO kWord)
         {
@@ -18,14 +18,12 @@ namespace BL.CONVERTORS
                 name = kWord.name,
             };
         }
-        public static KWordDTO ConvertKWordDTOToKWord(tbKWord kWord)
+        public static IEnumerable<tbKWord> ConvertKWordsToDTO(IEnumerable<KWordDTO> kWords)
         {
-            return new KWordDTO
-            {
-                KeyWordId = kWord.KeyWordId,
-                name = kWord.name,
-            };
+            return kWords.Select(a => ConvertKWordToDAL(a));
+
         }
 
+       
     }
 }
